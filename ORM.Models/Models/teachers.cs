@@ -16,6 +16,6 @@ namespace ORM.Models.Models
         public string email { get; set; }
         public string phone_number { get; set; }
         public string teacher_code { get; set; }
-        public string filed_of_study { get; set; }
+        public string field_of_study { get; set; }
     }
 }
