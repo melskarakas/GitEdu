@@ -14,6 +14,8 @@ namespace ORM.Models.Models
     {
         [ExplicitKey]
         public Guid id { get; set; }
+        public string lesson_name{ get; set; }
         public string lesson_code { get; set; }
+        public int lesson_time { get; set; }
     }
 }
