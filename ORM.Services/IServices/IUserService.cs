@@ -19,6 +19,5 @@ namespace ORM.Services.IServices
         Task<users?> AddAndUpdateUser(object userObj);
         Task<bool> ExistsByEmail(string email);
         Task<bool> ExistsByUserName(string userName);
-        Task<user_inf?> AddUserInfo(user_inf info);
     }
 }
