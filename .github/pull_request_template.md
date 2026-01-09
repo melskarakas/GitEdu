@@ -1,30 +1,33 @@
-## 📌 Açıklama
-Bu PR aşağıdaki item için hazırlanmıştır.
+## 📌 Problem&Açıklama
+[GEP-XX] : Problem Detayı
 
 ---
 
 ## 🔗 İlgili Item
-Fixes #
+Fixes #XX
 
 > Örnek: Fixes #12
 
 ---
 
 ## 🧩 GEP Kodu
-GEP-XXX
+GEP-XX
 
-> Örnek: GEP-012
-
+> Örnek: GEP-12
 ---
 
-## ✅ Yapılanlar
+## ✅ Çözüm&Geliştirme
 - [ ] Feature geliştirildi
 - [ ] Test edildi
 - [ ] Gerekli refactor yapıldı
 
 ---
 
+## 🧪 Veritabanı Değişikleri
+- Yeni column/table/funciton vb. eklendi mi?
+
+---
+
 ## 🧪 Test Notları
 (Opsiyonel)
 
-Commit message: Add PR template
