@@ -19,8 +19,7 @@ namespace ORM.Models.Models
         public string email { get; set; }
         public string phone_number { get; set; }
         public DateTime last_login_time { get; set; }
-        public bool is_registration { get; set; }
-        public Guid created_by { get; set; }
-        public Guid modified_by { get; set; }
+        public bool is_verify { get; set; }
+
     }
 }
