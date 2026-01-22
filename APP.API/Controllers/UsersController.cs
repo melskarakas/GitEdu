@@ -7,6 +7,7 @@ using ORM.Services.IServices;
 using APP.API.Models;
 using ORM.Services.Models;
 using APP.API.Auth;
+using ORM.Models.Models;
 
 namespace APP.API.Controllers
 {
@@ -94,26 +95,16 @@ namespace APP.API.Controllers
                 if (model == null || model.UserId == Guid.Empty)
                     return BadRequest(new { message = "Kullanıcı bilgisi gerekli." });
 
-                var info = new user_inf
+                users user = new users
                 {
                     id = Guid.NewGuid(),
-                    user_id = model.UserId,
-                    gender = model.Gender,
-                    age_range = model.AgeRange,
-                    daily_desk_hours = model.DailyDeskHours,
-                    work_environment = model.WorkEnvironment,
-                    working_position = model.WorkingPosition,
-                    pain_areas = model.PainAreas != null ? string.Join(',', model.PainAreas) : string.Empty,
-                    exercise_time = model.ExerciseTime,
-                    exercise_types = model.ExerciseTypes != null ? string.Join(',', model.ExerciseTypes) : string.Empty,
-                    reminder_preference = model.ReminderPreference,
                     created_date = DateTime.Now,
                     modified_date = DateTime.Now,
                     is_active = true,
                     is_deleted = false
                 };
 
-                var added = await _userService.AddUserInfo(info);
+                var added = await _userService.AddUser(user);
                 if (added == null)
                     return Conflict(new { message = "Bilgiler kaydedilemedi." });
 
