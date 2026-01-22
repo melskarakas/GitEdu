@@ -10,6 +10,14 @@ namespace ORM.Models
     public class BaseModel
     {
         /// <summary>
+        /// ilgili kaydı kimin oluştuğunu kaydeder. Değer gönderilmezse '00000000-0000-0000-0000-000000000000' verir.
+        /// </summary>
+        public Guid created_by { get; set; }
+        /// <summary>
+        /// ilgili kaydı kimin değiştirdiğini/güncellediğini kaydeder. Değer gönderilmezse '00000000-0000-0000-0000-000000000000' verir.
+        /// </summary>
+        public Guid modified_by { get; set; }
+        /// <summary>
         /// ilgili kaydın ne zaman oluştuğunu kaydeder. Değer gönderilmezse anlık tarihi verir.
         /// </summary>
         public DateTime created_date { get; set; } = DateTime.Now;
