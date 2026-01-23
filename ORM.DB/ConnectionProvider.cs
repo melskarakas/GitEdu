@@ -26,7 +26,7 @@ namespace ORM.DB
         public string GetConnectionString()
         {
             string path = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
-            path = Path.Combine(path, "appsettings.json");
+            path = Path.Combine(path, "appsettings.Development.json");
             Dictionary<string, dynamic> deger = new Dictionary<string, dynamic>();
             using (StreamReader file = File.OpenText(path))
             {
